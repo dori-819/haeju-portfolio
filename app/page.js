@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Reveal from "../components/reveal";
 
+const portfolioUrl =
+  "https://raw.githubusercontent.com/dori-819/haeju-portfolio/2712b35/public/assets/portfolio.pdf";
+
 const workItems = [
   {
     index: "01",
@@ -283,7 +286,7 @@ export default function HomePage() {
             <a className="button button-primary" href="/assets/resume.pdf" target="_blank" rel="noreferrer">
               Resume PDF
             </a>
-            <a className="button button-secondary" href="/assets/portfolio.pdf" target="_blank" rel="noreferrer">
+            <a className="button button-secondary" href={portfolioUrl} target="_blank" rel="noreferrer">
               Portfolio PDF
             </a>
           </div>
