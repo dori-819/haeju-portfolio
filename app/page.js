@@ -4,308 +4,249 @@ import Reveal from "../components/reveal";
 const portfolioUrl =
   "https://raw.githubusercontent.com/dori-819/haeju-portfolio/2712b35/public/assets/portfolio.pdf";
 
-const workItems = [
+const previewCards = [
   {
-    index: "01",
+    title: "AZAR Live",
+    subtitle: "Streamer growth system",
+    image: "/assets/azar-live-cover-1280.png",
+    href: "#work"
+  },
+  {
+    title: "JAMAKE",
+    subtitle: "Creator translation platform",
+    image: "/assets/jamake-cover-1280.png",
+    href: "#work"
+  },
+  {
+    title: "Minglo",
+    subtitle: "Translator workflow product",
+    image: "/assets/minglo-cover-1280.png",
+    href: "#strategy"
+  }
+];
+
+const workStudies = [
+  {
     name: "AZAR Live",
-    title: "Improving live experience so streamers stay, grow, and keep streaming.",
+    title: "Improving live experience so streamers stay, keep broadcasting, and understand progress more clearly.",
     description:
-      "I worked on the structural issues behind streamer supply and activity, then translated that into tier visibility, contest-based motivation, and more legible growth loops inside the product.",
-    meta: ["Hyperconnect · Match Group", "Dec 2023 - Aug 2024", "UX/UI design and planning"],
-    variant: "dark",
-    images: [
-      {
-        src: "/assets/azar-live-cover-1280.png",
-        alt: "AZAR Live case study cover"
-      },
-      {
-        src: "/assets/azar-live-engagement-1280.png",
-        alt: "AZAR Live engagement mechanic screens"
-      }
-    ]
+      "At Hyperconnect, I worked on streamer-side motivation and retention through tier visibility, contest engagement, and clearer growth feedback loops inside AZAR Live.",
+    role: "Product strategy, UX/UI design, interaction design",
+    outcome:
+      "The work focused on increasing streamer ratio, improving average streaming time, and making progression feel more legible during and after live sessions.",
+    image: "/assets/azar-live-engagement-1280.png"
   },
   {
-    index: "02",
     name: "JAMAKE",
-    title: "A video translation platform for YouTubers.",
+    title: "Redesigning the purchase journey for a YouTuber video translation platform.",
     description:
-      "I redesigned the purchase journey into a clearer one-page flow, reduced friction in language and output selection, and supported a service experience that felt easier to trust and complete.",
-    meta: ["Voithru", "Mar 2020 - Nov 2020", "Web, mobile, UX/UI design and planning"],
-    variant: "light",
-    images: [
-      {
-        src: "/assets/jamake-cover-1280.png",
-        alt: "JAMAKE overview slide"
-      }
-    ]
-  },
-  {
-    index: "03",
-    name: "Minglo",
-    title: "Building a platform for freelance translators.",
-    description:
-      "I helped define a translation workflow product for operators and translators, focusing on task allocation clarity, dashboard usability, and better day-to-day throughput.",
-    meta: ["Voithru", "Mar 2023 - May 2023", "Web, iOS app, UX/UI design"],
-    variant: "light",
-    images: [
-      {
-        src: "/assets/minglo-cover-1280.png",
-        alt: "Minglo product overview slide"
-      }
-    ]
+      "I simplified a multi-step ordering flow into a clearer one-page structure, reduced decision friction, and improved trust in the service setup process.",
+    role: "UX/UI design and planning across web and mobile touchpoints",
+    outcome:
+      "The revised purchase experience was designed to shorten decision time, increase purchase page reach, and make order completion feel less overwhelming.",
+    image: "/assets/jamake-cover-1280.png"
   }
 ];
 
-const craftItems = [
-  {
-    title: "Growth mechanics",
-    body: "Designing motivation loops, participation systems, and visibility structures that sustain activity."
-  },
-  {
-    title: "Global adaptation",
-    body: "Localizing flows for multiple markets while preserving clarity, consistency, and product intent."
-  },
-  {
-    title: "Service workflows",
-    body: "Reducing coordination overhead in operational products with cleaner task structures and dashboard UX."
-  },
-  {
-    title: "Design systems",
-    body: "Building reusable patterns, token logic, and naming rules that help teams move faster with quality."
-  }
+const leadershipPoints = [
+  "Led the majority of product design at Voithru from launch through stabilization and scale-up from Seed to Series B.",
+  "Owned design work across live streaming, monetization UX, localization, and design system efforts at Hyperconnect.",
+  "Worked end-to-end across planning, flows, interface execution, and design quality in close collaboration with PMs and engineers."
 ];
 
-const aboutItems = [
-  {
-    title: "Current focus",
-    body: "At Hyperconnect, I have owned product design across live streamer experiences, monetization UX, localization patterns for global markets, and multi-brand design system work."
-  },
-  {
-    title: "How I work",
-    body: "I care about bridging research, product strategy, and visual execution. My sweet spot is moving between system-level clarity and interface-level craft without losing the user story."
-  },
-  {
-    title: "Foundation",
-    body: "I studied Industrial Design at Dong-A University, and I use that background to connect spatial, visual, and interaction thinking in digital products."
-  }
+const strategyPoints = [
+  "Translate broad product problems into clearer flows, motivational mechanics, and measurable experience changes.",
+  "Use research insights, workflow mapping, and market adaptation thinking to shape product direction for global audiences.",
+  "Define structures that balance business goals, user clarity, and implementation feasibility."
 ];
 
-const impactItems = [
-  {
-    value: "5%",
-    label: "streamer ratio improvement called out in AZAR Live work"
-  },
-  {
-    value: "50%",
-    label: "product adoption increase highlighted in Minglo results"
-  },
-  {
-    value: "11%",
-    label: "daily throughput increase documented in translation workflows"
-  }
+const collaborationPoints = [
+  "Partner closely with engineering and product to simplify flows, align system behavior, and protect design quality during implementation.",
+  "Build reusable patterns and design-system logic so teams can move faster without losing consistency.",
+  "Work across startup and large-scale product contexts, switching comfortably between ambiguity, detail work, and launch pressure."
 ];
 
 export default function HomePage() {
   return (
-    <div className="page-shell">
-      <header className="site-header">
-        <a className="brand" href="#top">
-          <span className="brand-role">Product Designer</span>
-          <span className="brand-name">Haeju Yeo</span>
+    <div className="site-frame">
+      <header className="topbar">
+        <a className="wordmark" href="#top">
+          Haeju Yeo
         </a>
-        <nav className="site-nav">
+        <nav className="topnav">
           <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#resume">Resume</a>
-          <a href="#contact">Contact</a>
+          <a href="#leadership">Leadership</a>
+          <a href="#strategy">Strategy</a>
+          <a href="#collaboration">Collaboration</a>
         </nav>
       </header>
 
-      <main id="top">
-        <section className="hero section">
-          <Reveal className="hero-copy">
-            <p className="eyebrow">Seoul-based product designer building global digital products.</p>
-            <h1>
-              Designing experiences from <span>insight to impact</span> across live streaming, creator
-              tools, localization, and service platforms.
-            </h1>
-            <p className="hero-text">
-              I design for clarity, momentum, and measurable behavior change. Most recently at
-              Hyperconnect, I have led AZAR Live and new business initiatives across streamer growth,
-              engagement mechanics, monetization UX, localization, and design systems.
+      <main id="top" className="page">
+        <section className="intro">
+          <Reveal className="intro-copy">
+            <p className="intro-kicker">
+              Hi, I&apos;m Haeju Yeo,
+              <br />
+              Product Designer in Seoul
             </p>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#work">
-                See selected work
-              </a>
-              <a className="button button-secondary" href="/assets/resume.pdf" target="_blank" rel="noreferrer">
-                Open resume
-              </a>
+            <h1 className="intro-title">
+              Designing live experiences, creator tools, and workflow products with a focus on
+              clarity, momentum, and global usability. Most recently at Hyperconnect, I have led
+              work across AZAR Live, monetization UX, localization, and scalable design systems.
+            </h1>
+            <div className="jump-links">
+              <a href="#work">Work ↓</a>
+              <a href="#leadership">Leadership ↓</a>
+              <a href="#strategy">Strategy ↓</a>
+              <a href="#collaboration">Collaboration ↓</a>
+              <a href="#about">About me ↓</a>
+              <a href="#more">There&apos;s more ↓</a>
             </div>
           </Reveal>
 
-          <Reveal className="hero-panel">
-            <div className="hero-stat">
-              <span className="hero-stat-value">4+</span>
-              <span className="hero-stat-label">years shaping product experiences across web, iOS, Android</span>
-            </div>
-            <div className="hero-stat">
-              <span className="hero-stat-value">Global</span>
-              <span className="hero-stat-label">
-                market adaptation, user research, workflow design, systems thinking
-              </span>
-            </div>
-            <div className="hero-stat">
-              <span className="hero-stat-value">0 to scale</span>
-              <span className="hero-stat-label">startup execution and high-traffic product optimization</span>
-            </div>
+          <Reveal className="preview-strip">
+            {previewCards.map((card) => (
+              <a key={card.title} className="preview-card" href={card.href}>
+                <div className="preview-image-wrap">
+                  <Image src={card.image} alt={card.title} width={1280} height={720} />
+                </div>
+                <div className="preview-copy">
+                  <h2>{card.title}</h2>
+                  <p>{card.subtitle}</p>
+                </div>
+              </a>
+            ))}
           </Reveal>
         </section>
 
-        <Reveal as="section" className="marquee section">
-          <div className="marquee-track">
-            <span>Streamer Growth</span>
-            <span>Contest Mechanics</span>
-            <span>Localization</span>
-            <span>Design Systems</span>
-            <span>Creator Platforms</span>
-            <span>UX Strategy</span>
-            <span>Streamer Growth</span>
-            <span>Contest Mechanics</span>
-            <span>Localization</span>
-            <span>Design Systems</span>
-            <span>Creator Platforms</span>
-            <span>UX Strategy</span>
-          </div>
-        </Reveal>
-
-        <section id="work" className="section work">
+        <section id="work" className="content-section">
           <Reveal className="section-heading">
-            <p className="eyebrow">Selected Work</p>
-            <h2>Projects where product thinking, systems design, and execution met real business outcomes.</h2>
+            <p>work</p>
+            <h2>Selected product work across live streaming and creator service platforms.</h2>
           </Reveal>
 
-          <Reveal className="project-card project-dark">
-            <div className="project-copy">
-              <p className="project-index">{workItems[0].index}</p>
-              <h3>{workItems[0].name}</h3>
-              <p className="project-title">{workItems[0].title}</p>
-              <p className="project-description">{workItems[0].description}</p>
-              <ul className="project-meta">
-                {workItems[0].meta.map((item) => (
+          <div className="study-list">
+            {workStudies.map((study) => (
+              <Reveal key={study.name} className="study-row">
+                <div className="study-copy">
+                  <p className="study-label">{study.name}</p>
+                  <h3>{study.title}</h3>
+                  <p>{study.description}</p>
+                  <div className="study-meta">
+                    <div>
+                      <span>Role</span>
+                      <strong>{study.role}</strong>
+                    </div>
+                    <div>
+                      <span>Outcome</span>
+                      <strong>{study.outcome}</strong>
+                    </div>
+                  </div>
+                </div>
+                <div className="study-visual">
+                  <Image src={study.image} alt={study.name} width={1280} height={720} />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        <section id="leadership" className="content-section split-section">
+          <Reveal className="section-heading">
+            <p>leadership</p>
+            <h2>Leading product design through ambiguity, execution, and scale.</h2>
+          </Reveal>
+          <Reveal className="text-panel">
+            <ul className="statement-list">
+              {leadershipPoints.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </Reveal>
+        </section>
+
+        <section id="strategy" className="content-section split-section">
+          <Reveal className="section-heading">
+            <p>strategy</p>
+            <h2>Connecting user insight, product priorities, and system thinking.</h2>
+          </Reveal>
+          <div className="two-column-grid">
+            <Reveal className="text-panel">
+              <ul className="statement-list">
+                {strategyPoints.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-            </div>
-            <div className="project-visual-stack">
-              {workItems[0].images.map((image) => (
-                <Image
-                  key={image.src}
-                  src={image.src}
-                  alt={image.alt}
-                  width={1280}
-                  height={720}
-                  priority
-                />
-              ))}
-            </div>
-          </Reveal>
-
-          <div className="project-grid">
-            {workItems.slice(1).map((item) => (
-              <Reveal key={item.name} className="project-card project-light">
-                <div className="project-copy">
-                  <p className="project-index">{item.index}</p>
-                  <h3>{item.name}</h3>
-                  <p className="project-title">{item.title}</p>
-                  <p className="project-description">{item.description}</p>
-                  <ul className="project-meta">
-                    {item.meta.map((entry) => (
-                      <li key={entry}>{entry}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="project-visual-single">
-                  <Image src={item.images[0].src} alt={item.images[0].alt} width={1280} height={720} />
-                </div>
-              </Reveal>
-            ))}
+            </Reveal>
+            <Reveal className="image-panel">
+              <Image
+                src="/assets/minglo-cover-1280.png"
+                alt="Minglo overview"
+                width={1280}
+                height={720}
+              />
+            </Reveal>
           </div>
+        </section>
 
-          <Reveal className="impact-strip">
-            {impactItems.map((item) => (
-              <div key={item.value + item.label}>
-                <span className="impact-number">{item.value}</span>
-                <span className="impact-label">{item.label}</span>
-              </div>
-            ))}
+        <section id="collaboration" className="content-section split-section">
+          <Reveal className="section-heading">
+            <p>collaboration</p>
+            <h2>Building alignment with PMs, engineers, and operators without losing quality.</h2>
+          </Reveal>
+          <Reveal className="text-panel">
+            <ul className="statement-list">
+              {collaborationPoints.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </Reveal>
         </section>
 
-        <section id="about" className="section about">
+        <section id="about" className="content-section about-section">
           <Reveal className="section-heading">
-            <p className="eyebrow">About</p>
+            <p>about me</p>
             <h2>
-              I enjoy turning broad product challenges into focused experiences people can actually
-              understand, trust, and keep using.
+              Designer by practice, systems thinker by habit, and someone who enjoys turning
+              complex product problems into interfaces people can actually understand and use.
             </h2>
           </Reveal>
-
-          <div className="about-grid">
-            {aboutItems.map((item) => (
-              <Reveal key={item.title} className="about-panel">
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-
-        <section className="section craft">
-          <Reveal className="section-heading">
-            <p className="eyebrow">Craft</p>
-            <h2>The kind of product problems I tend to make progress on.</h2>
+          <Reveal className="about-grid">
+            <div>
+              <span>Current</span>
+              <p>Product Designer at Hyperconnect / Match Group</p>
+            </div>
+            <div>
+              <span>Education</span>
+              <p>Dong-A University, Industrial Design (Visual Media Design)</p>
+            </div>
+            <div>
+              <span>Contact</span>
+              <p>yhaejoooo@gmail.com</p>
+              <p>+82 10 7229 9402</p>
+              <p>Seoul, Korea</p>
+            </div>
           </Reveal>
-
-          <div className="craft-grid">
-            {craftItems.map((item) => (
-              <Reveal key={item.title} className="craft-card">
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </Reveal>
-            ))}
-          </div>
         </section>
 
-        <Reveal as="section" id="resume" className="section resume-panel">
-          <div>
-            <p className="eyebrow">Resume & Portfolio</p>
-            <h2>Download the original documents or continue with the web version above.</h2>
-          </div>
-          <div className="resume-actions">
-            <a className="button button-primary" href="/assets/resume.pdf" target="_blank" rel="noreferrer">
-              Resume PDF
+        <section id="more" className="content-section more-section">
+          <Reveal className="section-heading">
+            <p>there&apos;s more</p>
+            <h2>Original files and deeper materials.</h2>
+          </Reveal>
+          <Reveal className="more-links">
+            <a href="/assets/resume.pdf" target="_blank" rel="noreferrer">
+              Resume PDF ↗
             </a>
-            <a className="button button-secondary" href={portfolioUrl} target="_blank" rel="noreferrer">
-              Portfolio PDF
+            <a href={portfolioUrl} target="_blank" rel="noreferrer">
+              Portfolio PDF ↗
             </a>
-          </div>
-        </Reveal>
+            <a href="https://www.linkedin.com/in/yhaejoooo/" target="_blank" rel="noreferrer">
+              LinkedIn ↗
+            </a>
+          </Reveal>
+        </section>
       </main>
-
-      <Reveal as="footer" id="contact" className="site-footer">
-        <div>
-          <p className="eyebrow">Contact</p>
-          <h2>Open to thoughtful product conversations and design opportunities.</h2>
-        </div>
-        <div className="footer-links">
-          <a href="mailto:yhaejoooo@gmail.com">yhaejoooo@gmail.com</a>
-          <a href="tel:+821072299402">+82 10 7229 9402</a>
-          <a href="https://www.linkedin.com/in/yhaejoooo/" target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-        </div>
-      </Reveal>
     </div>
   );
 }
